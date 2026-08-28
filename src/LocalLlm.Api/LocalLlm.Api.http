@@ -1,0 +1,8 @@
+@LocalLlm.Api_HostAddress = https://localhost:7053
+
+POST {{LocalLlm.Api_HostAddress}}/api/generate
+Content-Type: application/json
+
+{
+  "prompt": "In one sentence, explain dependency injection."
+}

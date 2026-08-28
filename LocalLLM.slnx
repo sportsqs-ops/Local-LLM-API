@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/LocalLlm.Api/LocalLlm.Api.csproj" Id="6ce0631a-43f9-47c3-b738-748962956e8d" />
+  <Project Path="tests/LocalLlm.Api.Tests/LocalLlm.Api.Tests/LocalLlm.Api.Tests.csproj" Id="04ccd765-9b22-47d4-b51c-824113e50df4" />
+</Solution>
