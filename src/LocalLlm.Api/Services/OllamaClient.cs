@@ -103,15 +103,13 @@ public sealed class OllamaClient(
                 await response.Content.ReadAsStreamAsync(cancellationToken);
 
             using var reader = new StreamReader(stream);
-
-            while (!reader.EndOfStream)
+            string? line;
+            while ((line = await reader.ReadLineAsync(cancellationToken)) is not null)
             {
-                var line = await reader.ReadLineAsync(cancellationToken);
+               // var line = await reader.ReadLineAsync(cancellationToken);
 
                 if (string.IsNullOrWhiteSpace(line))
-                {
                     continue;
-                }
 
                 using var document = JsonDocument.Parse(line);
 
